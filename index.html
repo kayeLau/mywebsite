@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="./style/public.css" />
+    <link rel="stylesheet" href="./style/home.css" />
+    <link rel="stylesheet" href="./style/nav.css" />
+    <link rel="stylesheet" href="./style/about.css" />
+    <link rel="stylesheet" href="./style/mywork.css" />
+    <link rel="stylesheet" href="./style/work1001.CSS" />
+    <link rel="stylesheet" href="./style/work1002.CSS" />
+    <link rel="stylesheet" href="./style/myworkdetail.css" />
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <header>  
+      </header>
+      <nav>
+        <div id="nav-wrapper">
+        <router-link to="/">
+          <div class="logo"></div>
+        </router-link>
+            <ul class="nav-group">
+                <li><router-link to="/about">ABOUT</router-link></li>
+                <li><router-link to="/mywork">MY WORK</router-link></li>
+                <li><router-link to="/about">BLOG</router-link></li>
+            </ul>
+        </div>
+      </nav>
+      <main>
+        <router-view></router-view>
+      </main>
+    </div>
+    <script src="./script/vue.js"></script>
+    <!-- <script src="./script/main.js"></script> -->
+  </body>
+</html>

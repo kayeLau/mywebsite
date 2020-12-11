@@ -1,0 +1,25 @@
+#sushi-bg {
+  background: red url("../asset/mywork/sushitran/sushi.jpg");
+  height: 30rem;
+  width: 50rem;
+  overflow: hidden;
+}
+#sushi-sushi {
+  position: relative;
+  overflow: hidden;
+  height: 60px;
+  width: 960px;
+  top: 345px;
+}
+#sushi-sushi ul {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+#sushi-sushi ul li {
+  float: left;
+  list-style: none;
+  height: 55px;
+  width: 50px;
+  margin: 0px 5px;
+}

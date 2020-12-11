@@ -1,0 +1,32 @@
+#game-wrapper{
+    display: block;
+    position: relative;
+}
+#game-myCanvas { 
+  background: #eee; 
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#game-gameover{
+  width: 480px;
+  height: 320px;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: gray;
+}
+#game-again{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#game-again span{
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #fff;
+}

@@ -1,0 +1,33 @@
+#nav-wrapper{
+    list-style: none;
+    height: 5rem;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.logo{
+    margin-left: 5rem;
+    display: inline-block;
+    width: 20rem;
+    height: 5rem;
+    background-image: url(../asset/1607432290_763535.png);
+    background-size: 100% 100%;
+}
+.nav-group{
+    float: right;
+    display: block;
+    margin-right: 5rem;
+}
+#nav-wrapper li{
+    padding: 0 20px;
+    display: inline-block;
+}
+#nav-wrapper a{
+    color: #545149;
+    text-decoration:none;
+    font-size: 22px;
+    font-weight: 200;
+    padding-bottom: 30px;
+}
+#nav-wrapper a:hover{
+    color: #d48a00;
+}
