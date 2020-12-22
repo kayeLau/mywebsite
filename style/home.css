@@ -10,10 +10,23 @@
 #home-image-bg{
     background-image: url(../asset/bg.png);
     background-size: 100% 100%;
+    background-repeat: no-repeat;
+    animation: fadein 0.8s ease-in ;
 }
 .home-btn-go{
     text-align: center;
 }
 .home-btn-go button{
     width: 200px;
+}
+
+@keyframes fadein {
+    from{
+        opacity: 0;
+        background-position-y: 50px;
+    }
+    to{
+        opacity: 100%;
+        background-position-y: 0px;
+    }
 }
