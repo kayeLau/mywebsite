@@ -11,6 +11,28 @@
     justify-content: center;
     height: 100%;
 }
+.mywork-nav ul{
+    list-style: none;
+    display: block;
+    height: 50px;
+    box-sizing: border-box;
+}
+.mywork-nav li{
+    display: inline-block;
+    font-size: 20px;
+    color: #000000;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px 10px 1px 10px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.mywork-nav li:hover{
+    animation: underline 0.3s ease-in forwards;
+}
+.mywork-nav a:active{
+    color: #adebb5;
+}
 .mywork-item,.mypaint-item{
     margin: 0.5rem;
     width: 20rem;
@@ -45,14 +67,31 @@
     text-decoration: none;
 }
 .mypaint-item{
-    width: 35rem;
-    background-color: rgb(224, 199, 236);
+    background-color: #ffffff;
+
 }
+/* .mypaint-item:nth-child(2){
+    position: absolute;
+} */
+/* .mypaint-img:nth-child(2) {
+    background-size: contain;
+} */
 .mypaint-img{
     width: 100%;
     height: 40rem;
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center center;
     margin: 0.8rem 0 0.7rem 0;
     transition: all 0.25s ease-in-out;
+    flex: 1;
+}
+
+@keyframes underline{
+    from{
+        border-bottom: 0px solid #adebb5;
+    }
+    to{
+        border-bottom: 5px solid #adebb5;
+    }
 }
