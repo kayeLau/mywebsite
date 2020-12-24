@@ -1,11 +1,14 @@
 const home = Vue.component("home", {
   methods: {
     setPictureSize() {
-      let homeBG = document.querySelector("#home-image-bg");
+      let homeBG = document.querySelector(".home-image-bg");
+      let circle = document.querySelector(".circle");
       if(!homeBG) return
       let bodyWidth = document.body.offsetWidth;
-      homeBG.style.width = bodyWidth * 0.8 + "px";
-      homeBG.style.height = bodyWidth * 0.8 * 0.33 + "px";
+      circle.style.width = bodyWidth * 0.35 + "px";
+      circle.style.height = bodyWidth * 0.35 +  "px";
+      homeBG.style.width = bodyWidth * 0.25 + "px";
+      homeBG.style.height = bodyWidth * 0.23 +  "px";
     },
   },
   mounted() {
@@ -17,39 +20,38 @@ const home = Vue.component("home", {
   },
   template: `
     <div class='home-main'>
-      <div id="home-image-bg"></div>
+    <div class='circle'>
+    <div class="home-image-bg"></div>
+    </div>
+    <div class='home-wrapper'></div>
     </div>`,
 });
 const about = Vue.component("about", {
-  computed:{
-    age(){
-      return new Date().getFullYear() - 1995;
+  methods:{
+    goToPage(url){
+      window.location.href = url;
     }
   },
   template: `<div class="about-container">
     <div class="about-card">
       <div class="about-border">
       <div class="about-avatar">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/199526/jonsnow.jpg" alt="" />
+        <img src="../asset/bidu.png" alt="" />
+      </div>
+      <div style='margin:0 30px'>
+      <img src="../asset/codepan.png" width='50px' height='50px' alt="" style='margin-right:5px;cursor: pointer;' @click='goToPage("https://codepen.io/KayeLau")'>
+      <img src="../asset/github.png" width='50px' height='50px' alt="" style='cursor: pointer;' @click='goToPage("https://github.com/kayeLau")'>
       </div>
       <hr />
       <div class="about-stats">
         <h2>Kaye Lau</h2>
         <hr />
         <div>
-          <p><b>年齡</b> : {{this.age}}歲</p>
-          <p><b>碼齡</b> : 1年</p>
-          <p><b>坐標</b> : 廣州</p>
-          <p><b>學校&專業</b> : 暨南大學-網絡與新媒體(本科) &nbsp 暨南大學-新聞與傳播(研究生)</p>
+          <p>歡迎來到我的網頁!這是一個關於菜烏成長的故事</p>
           <br>
-          <ul><b>技能清單</b>:
-          <li>后端开发：Node.js</li>
-          <li>前端框架：VueJS</li>
-          <li>前端样式库：ElementUI</li>
-          <li>前端调试：Postman/Vue Dev Tools</li>
-          <li>数据库相关：MongoDB</li>
-          <br>
-          <p>前端開發小白,对前端技术具有浓厚的兴趣，不断学习新知识丰富自己</p>
+          <h3>Content</h3>
+          <p>QQ:3236217797</p>
+          <p>Email:3236217797@qq.com</p>
           </ul>
         </div>
       </div>
@@ -388,7 +390,16 @@ const work1001 = Vue.component('work1001',{
 </div>
   `
 })
-
+const blog = Vue.component('blog',{
+  template:`
+  <div>
+    <div id='blog'>
+    <div class='image'></div>
+    <div>此頁正在整理喔!</div>
+    </div>
+  </div>
+  `
+})
 
 
 const routes = [
@@ -396,7 +407,8 @@ const routes = [
   { path: "/about", component: about },
   { path: "/mywork",name:"mywork",component: myWork},
   { path: "/mywork/1001", component: work1001},
-  { path: "/mywork/1002", component: work1002}
+  { path: "/mywork/1002", component: work1002},
+  { path: "/blog", component: blog}
 ]
 const router = new VueRouter({
   routes,
