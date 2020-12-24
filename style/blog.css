@@ -1,0 +1,15 @@
+#blog{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+#blog .image{
+    background-image: url(../asset/xiba.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width:380px;
+    height:460px;
+    margin-bottom: 20px;
+}

@@ -1,5 +1,5 @@
 .home-main{
-    padding: 20px 30px;
+    padding: 0px 30px;
     height: 80vh;
     box-sizing: border-box;
     display: flex;
@@ -7,26 +7,54 @@
     justify-content: center;
     align-items: center;
 }
-#home-image-bg{
-    background-image: url(../asset/bg.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+.circle{
+    z-index: 3;
+    background-color: aliceblue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: fadein 0.8s ease-in ;
 }
-.home-btn-go{
-    text-align: center;
+.home-image-bg{
+    background-image: url(../asset/cat.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transform-origin: bottom left;
+    animation: scalein 1s ease-in-out ;
 }
-.home-btn-go button{
-    width: 200px;
+.home-wrapper{
+    position: absolute;
+    height: 150vh;
+    width: 100vw;
+    background-color: #f3aa81;
+    z-index: 2;
+    animation: fadeout 0.8s linear forwards;
+    animation-delay: 1.5s;
 }
 
+@keyframes scalein {
+    from{
+        transform: scale(0)
+    }
+    to{
+        transform: scale(1)
+    }
+}
 @keyframes fadein {
     from{
         opacity: 0;
-        background-position-y: 50px;
     }
     to{
-        opacity: 100%;
-        background-position-y: 0px;
+        opacity: 1;
+    }
+}
+@keyframes fadeout {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        z-index: -999;
     }
 }
