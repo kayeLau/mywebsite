@@ -36,11 +36,11 @@ const about = Vue.component("about", {
     <div class="about-card">
       <div class="about-border">
       <div class="about-avatar">
-        <img src="../asset/bidu.png" alt="" />
+        <img src="./asset/bidu.png" alt="" />
       </div>
       <div style='margin:0 30px'>
-      <img src="../asset/codepan.png" width='50px' height='50px' alt="" style='margin-right:5px;cursor: pointer;' @click='goToPage("https://codepen.io/KayeLau")'>
-      <img src="../asset/github.png" width='50px' height='50px' alt="" style='cursor: pointer;' @click='goToPage("https://github.com/kayeLau")'>
+      <img src="./asset/codepan.png" width='50px' height='50px' alt="" style='margin-right:5px;cursor: pointer;' @click='goToPage("https://codepen.io/KayeLau")'>
+      <img src="./asset/github.png" width='50px' height='50px' alt="" style='cursor: pointer;' @click='goToPage("https://github.com/kayeLau")'>
       </div>
       <hr />
       <div class="about-stats">
